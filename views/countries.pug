@@ -1,0 +1,11 @@
+html
+  head
+    title= title
+  body
+    h1= message
+    form(action='sendCountry', method='get')
+      each country in countries
+        input(type='radio', name='country', value= country.properties.country)
+        | #{country.properties.country} 
+        br
+      input(type='submit', value='send2')
