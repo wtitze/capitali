@@ -18,6 +18,11 @@ app.get('/sendContinent', function (req, res) {
   res.render('countries', { countries:countries.findByContinent(continent)});
 });    
 
+app.get('/sendCity', function (req, res) {
+  var continent = req.query.continent;
+  res.render('countries', { countries:countries.findByContinent(continent)});
+});   
+
 app.get('/sendCountry', function (req, res) {
   var country = req.query.country;
   countries.rawData.forEach(function(nazione) {
